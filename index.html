@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Processor Mockup</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Top Bar: Title + Menu Buttons -->
+        <header class="title-bar">
+            <div class="title-left">
+                <span class="title-icon">■</span>
+                <span class="title-label">Word Processor</span>
+            </div>
+            <div class="spacer"></div>
+            <nav class="menu-buttons">
+                <!-- All Menu Buttons are now visible -->
+                <button class="menu-button" data-menu="file-menu">File</button>
+                <button class="menu-button" data-menu="edit-menu">Edit</button>
+                <button class="menu-button" data-menu="insert-menu">Insert</button>
+                <button class="menu-button" data-menu="format-menu">Format</button>
+                <button class="menu-button" data-menu="review-menu">Review</button>
+                <button class="menu-button" data-menu="view-menu">View</button>
+                <button class="menu-button" data-menu="tools-menu">Tools</button>
+            </nav>
+        </header>
+
+        <!-- Dropdown Menus (Initially Hidden) -->
+        <div id="file-menu" class="dropdown-menu">
+            <ul>
+                <li><a href="#">New</a></li>
+                <li><a href="#">Save</a></li>
+                <li class="separator"></li>
+                <li><a href="#">Print</a></li>
+                <li><a href="#">Page setup</a></li>
+                <li><a href="#">Templates</a></li>
+                <li><a href="#">Envelopes</a></li>
+                <li class="separator"></li>
+                <li><a href="#">Permissions</a></li>
+                <li class="separator"></li>
+                <li><a href="#">Close</a></li>
+            </ul>
+        </div>
+
+        <div id="edit-menu" class="dropdown-menu">
+             <ul>
+                <li><a href="#">Undo</a></li>
+                <li><a href="#">Redo</a></li>
+                <li class="separator"></li>
+                <li><a href="#">Cut</a></li>
+                <li><a href="#">Copy</a></li>
+                <li><a href="#">Paste</a></li>
+                <li class="separator"></li>
+                <li><a href="#">Auto-correct</a></li>
+                <li><a href="#">Change case</a></li>
+                <li class="separator"></li>
+                <li><a href="#">Spelling</a></li>
+                <li><a href="#">Thesaurus</a></li>
+                <li><a href="#">Dictionary</a></li>
+             </ul>
+        </div>
+
+         <div id="insert-menu" class="dropdown-menu">
+             <ul>
+                 <li class="has-submenu">
+                     <a href="#">Table</a>
+                     <ul class="submenu">
+                         <li><a href="#">Insert Table...</a></li>
+                         <li><a href="#">Merge cells</a></li>
+                         <li><a href="#">Split cells</a></li>
+                     </ul>
+                 </li>
+                 <li><a href="#">Image</a></li>
+                 <li><a href="#">Chart</a></li>
+                 <li><a href="#">Shape</a></li>
+                 <li><a href="#">Text box</a></li>
+                 <li class="separator"></li>
+                 <li><a href="#">Header</a></li>
+                 <li><a href="#">Footer</a></li>
+                 <li><a href="#">Footnote</a></li>
+                 <li><a href="#">Page Numbers</a></li>
+                 <li class="separator"></li>
+                 <li><a href="#">Table of contents</a></li>
+                 <li><a href="#">Caption</a></li>
+                 <li class="separator"></li>
+                 <li><a href="#">Equation</a></li>
+             </ul>
+         </div>
+
+         <div id="format-menu" class="dropdown-menu">
+             <ul>
+                 <li><a href="#">Font</a></li>
+                 <li><a href="#">Paragraph</a></li>
+                 <li><a href="#">Bullets</a></li>
+                 <li><a href="#">Columns</a></li>
+                 <li><a href="#">Tabs</a></li>
+                 <li class="separator"></li>
+                 <li class="has-submenu">
+                     <a href="#">Borders and shading</a>
+                     <ul class="submenu">
+                          <li><a href="#">Borders...</a></li>
+                          <li><a href="#">Shading...</a></li>
+                     </ul>
+                 </li>
+                 <li><a href="#">Text direction</a></li>
+                 <li><a href="#">Hyphenation</a></li>
+                 <li class="separator"></li>
+                 <li><a href="#">Zoom</a></li>
+             </ul>
+         </div>
+
+         <div id="review-menu" class="dropdown-menu">
+            <ul>
+               <li><a href="#">Track changes</a></li>
+               <li><a href="#">Markup</a></li>
+               <li><a href="#">New comment</a></li>
+               <li class="separator"></li>
+               <li><a href="#">Word count</a></li>
+               <li><a href="#">Mail merge</a></li>
+           </ul>
+         </div>
+
+        <div id="view-menu" class="dropdown-menu">
+             <ul>
+                <li><a href="#">Ruler</a></li>
+                <li><a href="#">Margins</a></li>
+                <li><a href="#">Orientation</a></li>
+                <li class="separator"></li>
+                <li><a href="#">Zoom</a></li>
+             </ul>
+        </div>
+
+        <div id="tools-menu" class="dropdown-menu">
+             <ul>
+                <li><a href="#">Sample Tool 1</a></li>
+                <li><a href="#">Sample Tool 2</a></li>
+                <!-- Add more tool items if needed -->
+            </ul>
+        </div>
+
+        <!-- Main Content Area -->
+        <main class="content-area">
+            <div class="editor-header">
+                <div class="editor-label">Document Editor</div>
+                <div class="spacer"></div>
+                <div class="toolbar">
+                    <button class="toolbar-button">Bold</button>
+                    <button class="toolbar-button">Italic</button>
+                    <button class="toolbar-button">Underline</button>
+                    <span class="separator-vertical"></span>
+                    <button class="toolbar-button">Align Left</button>
+                    <button class="toolbar-button">Align Center</button>
+                    <button class="toolbar-button">Align Right</button>
+                </div>
+            </div>
+            <textarea id="document-area" rows="15">This is where you can start typing your document. Use the toolbar above to format your text.</textarea>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
