@@ -216,19 +216,45 @@ body {
     border-color: #aaa; /* Slightly darker border on focus */
 }
 
-/* Credits Footer Styling */
-.credits-footer {
-    text-align: center;  /* Center the text block */
-    margin-top: 30px;    /* Space above the footer */
-    margin-bottom: 20px; /* Space below the footer */
-    padding: 10px;
+/* New Table Styles */
+.credits-footer table {
+    width: auto; /* Let table size itself, or set a max-width */
+    margin-left: auto;   /* Center the table block */
+    margin-right: auto;
+    border-collapse: collapse; /* Collapse borders into a single line */
+    font-size: 12px;
+    color: #444; /* Slightly darker text */
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1); /* Optional subtle shadow */
+    background-color: #fff; /* Optional table background */
+    border-radius: 5px; /* Optional rounded corners */
+    overflow: hidden; /* Needed for border-radius */
 }
 
-.credits-footer pre {
-    display: inline-block; /* Allows text-align: center to work on the block */
-    text-align: left;    /* Keep the text itself left-aligned within the centered block */
-    font-size: 12px;     /* Slightly smaller font */
-    color: #555;        /* Greyish text color */
-    line-height: 1.6;    /* Adjust line spacing */
-    font-family: Consolas, monospace; /* Use a monospaced font for pre */
+.credits-footer caption {
+    font-size: 1.4em; /* Bigger caption */
+    font-weight: bold;
+    caption-side: top; /* Place caption above table */
+    padding: 10px;
+    color: #333;
+}
+
+.credits-footer th,
+.credits-footer td {
+    border: 1px solid #ddd; /* Light grey borders for cells */
+    padding: 8px 15px;     /* Cell padding */
+    text-align: left;      /* Align text left */
+}
+
+.credits-footer th {
+    background-color: #f2f2f2; /* Light background for header cells */
+    font-weight: 600;       /* Semi-bold header text */
+    color: #555;
+}
+
+/* Keep the overall centering for the footer container */
+.credits-footer {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding: 10px;
 }
