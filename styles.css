@@ -215,3 +215,20 @@ body {
 #document-area:focus {
     border-color: #aaa; /* Slightly darker border on focus */
 }
+
+/* Credits Footer Styling */
+.credits-footer {
+    text-align: center;  /* Center the text block */
+    margin-top: 30px;    /* Space above the footer */
+    margin-bottom: 20px; /* Space below the footer */
+    padding: 10px;
+}
+
+.credits-footer pre {
+    display: inline-block; /* Allows text-align: center to work on the block */
+    text-align: left;    /* Keep the text itself left-aligned within the centered block */
+    font-size: 12px;     /* Slightly smaller font */
+    color: #555;        /* Greyish text color */
+    line-height: 1.6;    /* Adjust line spacing */
+    font-family: Consolas, monospace; /* Use a monospaced font for pre */
+}
